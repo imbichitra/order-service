@@ -5,13 +5,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @SpringBootApplication
 @RestController
-@ManagedResource("/orders")
+@RequestMapping("/orders")
 public class OrderServiceApplication {
 
 	@Autowired
